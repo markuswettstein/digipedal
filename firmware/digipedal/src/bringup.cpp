@@ -1,9 +1,11 @@
 #include "bringup.h"
 #include "pins.h"
 #include "status_led.h"
+#include "digipot.h"
 
 #include <Arduino.h>
 #include <Wire.h>
+
 
 static uint32_t last_activity_ms = 0;
 
@@ -26,6 +28,10 @@ void bringup_init() {
 
     Wire.begin();
     Wire.setClock(I2C_FREQ);
+
+	digipot::init();
+	digipot::set_drive(0);
+	digipot::set_tone(0);
 
     Serial1.begin(MIDI_BAUD);
   }

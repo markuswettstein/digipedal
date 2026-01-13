@@ -16,6 +16,9 @@ constexpr uint8_t MIDI_TX_PIN = 4;
 constexpr uint32_t I2C_FREQ = 100000;
 constexpr uint8_t I2C_SDA_PIN = 0;
 constexpr uint8_t I2C_SCL_PIN = 2;
+constexpr uint8_t I2C_ADDR_POT_DRIVE = 0x3C;
+constexpr uint8_t I2C_ADDR_POT_TONE  = 0x3D;
+
 
 // Actuator / control
 constexpr uint8_t COIL_PIN = 1;
