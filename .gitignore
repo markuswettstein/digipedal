@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+#local tools / outputs
+bin/
+
+# Arduino / IDE caches
+**/.arduinoIDE*
+**/build*
+**/.vscode
+**/.idea
+
+# binaries
+*.bin
+*.hex
+*.elf
+
+# Secrets
+*.env
+
