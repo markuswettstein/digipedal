@@ -1,7 +1,8 @@
 #pragma once
 #include <stdint.h>
 #define BOARD_TRINKET_M0
-constexpr bool STANDALONE_MODE = true;
+// Set true to run LED self-test only (no I2C/MIDI hardware required)
+constexpr bool STANDALONE_MODE = false;
 
 // Status LED (onboard DotStar)
 constexpr uint8_t DOTSTAR_DATA_PIN  = 7;

@@ -7,7 +7,9 @@ CXXFLAGS := -std=gnu++17 -O2 -Wall -Wextra
 clean:
 	rm -rf build
 build:
-	arduino-cli compile --fqbn $(FQBN) $(SKETCH)
+	arduino-cli compile --fqbn $(FQBN) \
+	  --build-property "compiler.cpp.extra_flags=-std=gnu++17" \
+	  $(SKETCH)
 
 upload:
 	arduino-cli upload -p $(PORT) --fqbn $(FQBN) $(SKETCH)

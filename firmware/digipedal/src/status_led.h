@@ -13,4 +13,7 @@ void activity();
 void ok();
 void error();
 
+// Call each loop iteration; turns off the activity flash after its hold time
+void tick();
+
 } // namespace status_led

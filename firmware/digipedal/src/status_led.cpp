@@ -42,14 +42,11 @@ void error() {
   show_color(0x200000, BRIGHTNESS_DIM); // dim red
 }
 
-// Optional helper
-static void maybe_decay_activity() {
+void tick() {
   if (last_activity_ms && (millis() - last_activity_ms > 40)) {
     off();
     last_activity_ms = 0;
   }
 }
-
-
 
 } // namespace status_led
